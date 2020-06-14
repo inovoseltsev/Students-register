@@ -1,0 +1,40 @@
+.table-wrapper {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.table-wrapper {
+    margin-top: 100px;
+}
+
+.table-wrapper .add-btn {
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.pagination p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.save-btn-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    text-align: end;
+}
+
+.save-btn {
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.save-btn:hover {
+    color: white;
+}
+
