@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.invoseltsev</groupId>
-    <artifactId>student_list</artifactId>
+    <artifactId>students-register</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
