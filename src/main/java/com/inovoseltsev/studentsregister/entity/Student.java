@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 @Entity
-@Table(name = "STUDENT", schema = "other")
+@Table(name = "STUDENT")
 public class Student {
     private Long studentId;
     private String firstName;
