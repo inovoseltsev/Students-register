@@ -47,8 +47,7 @@ public class HibernateStudentRepository implements StudentRepository {
     @Transactional(readOnly = true)
     public Student findById(Long id) {
         try {
-            Query query = sessionFactory.getCurrentSession().createQuery(
-                    "from Student where studentId =: id");
+            Query query = sessionFactory.getCurrentSession().createQuery("from Student where studentId =: id");
             query.setParameter("id", id);
             return (Student) query.uniqueResult();
         } catch (Exception e) {
@@ -59,8 +58,7 @@ public class HibernateStudentRepository implements StudentRepository {
     @Override
     public List<Student> findAll() {
         try {
-            List<Student> students = sessionFactory.getCurrentSession()
-                    .createQuery("from Student order by studentId").list();
+            List<Student> students = sessionFactory.getCurrentSession().createQuery("from Student order by studentId").list();
             return students;
         } catch (Exception e) {
             throw new RuntimeException(e);

@@ -44,20 +44,16 @@ public class HibernateConfig {
 
     @Bean
     public PlatformTransactionManager hibernateTransactionManager() {
-        HibernateTransactionManager transactionManager
-                = new HibernateTransactionManager();
+        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(sessionFactory().getObject());
         return transactionManager;
     }
 
     private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto",
-                env.getProperty("db.hbm2ddl.auto"));
-        hibernateProperties.setProperty("hibernate.dialect", env.
-                getProperty("db.dialect"));
-        hibernateProperties.setProperty("show_sql", env.
-                getProperty("db.show_sql"));
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("db.hbm2ddl.auto"));
+        hibernateProperties.setProperty("hibernate.dialect", env.getProperty("db.dialect"));
+        hibernateProperties.setProperty("show_sql", env.getProperty("db.show_sql"));
         return hibernateProperties;
     }
 }

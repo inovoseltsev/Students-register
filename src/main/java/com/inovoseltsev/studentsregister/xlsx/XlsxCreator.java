@@ -73,8 +73,7 @@ public class XlsxCreator {
     }
 
 
-    private void createBodyRows(XSSFSheet sheet, int startRowNumber,
-                                List<Student> students) {
+    private void createBodyRows(XSSFSheet sheet, int startRowNumber, List<Student> students) {
         Row row;
         Cell cell;
         int rowNumber = startRowNumber;
@@ -115,8 +114,7 @@ public class XlsxCreator {
         XSSFWorkbook workbook = sheet.getWorkbook();
         CellStyle dateCellStyle = workbook.createCellStyle();
         CreationHelper creationHelper = workbook.getCreationHelper();
-        dateCellStyle.setDataFormat(creationHelper.createDataFormat()
-                .getFormat("yyyy-MM-dd"));
+        dateCellStyle.setDataFormat(creationHelper.createDataFormat().getFormat("yyyy-MM-dd"));
         return dateCellStyle;
     }
 }

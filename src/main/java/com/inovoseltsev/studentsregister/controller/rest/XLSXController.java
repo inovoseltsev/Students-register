@@ -22,8 +22,7 @@ public class XLSXController {
         try {
             IOUtils.copy(inputStream, response.getOutputStream());
             response.setContentType("application/xlslx");
-            response.setHeader("Content-Disposition", "attachment; " +
-                    "filename=\"students.xlsx\"");
+            response.setHeader("Content-Disposition", "attachment; " + "filename=\"students.xlsx\"");
         } catch (IOException e) {
             throw new RuntimeException("IOError writing file to output stream");
         }
