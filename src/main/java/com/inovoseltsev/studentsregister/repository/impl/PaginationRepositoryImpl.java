@@ -18,8 +18,7 @@ public class PaginationRepositoryImpl implements PaginationRepository {
     @Override
     public List<Student> getObjectsPage(int limit, int offset) {
         try {
-            Query query = sessionFactory.getCurrentSession().createQuery(
-                    "from Student order by studentId");
+            Query query = sessionFactory.getCurrentSession().createQuery("from Student order by studentId");
             query.setFirstResult(offset);
             query.setMaxResults(limit);
             return query.getResultList();
@@ -31,8 +30,7 @@ public class PaginationRepositoryImpl implements PaginationRepository {
     @Override
     public List<Student> getAllObjectsPage(int offset) {
         try {
-            Query query = sessionFactory.getCurrentSession().createQuery(
-                    "from Student order by studentId");
+            Query query = sessionFactory.getCurrentSession().createQuery("from Student order by studentId");
             query.setFirstResult(offset);
             return query.getResultList();
         } catch (Exception e) {

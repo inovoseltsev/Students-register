@@ -68,8 +68,7 @@ public class MainController {
         Student currentStudent = studentRepository.findById(studentId);
         currentStudent.setFirstName(formParameters.get("firstName"));
         currentStudent.setLastName(formParameters.get("lastName"));
-        currentStudent.setBirthday(Date.valueOf(formParameters.get(
-                "birthday")));
+        currentStudent.setBirthday(Date.valueOf(formParameters.get("birthday")));
         currentStudent.setFaculty(formParameters.get("faculty"));
         studentService.update(currentStudent);
         int pageNumber = Integer.parseInt(formParameters.get("pageNumber"));
@@ -98,10 +97,8 @@ public class MainController {
         }
         List<Student> currentStudents = paginationService.getObjectsPage(pageNumber);
         ModelMap modelMap = new ModelMap();
-        modelMap.addAttribute("studentList",
-                currentStudents);
-        modelMap.addAttribute("numberOfPages",
-                paginationService.getNumberOfTablePages());
+        modelMap.addAttribute("studentList", currentStudents);
+        modelMap.addAttribute("numberOfPages", paginationService.getNumberOfTablePages());
         modelMap.addAttribute("navigationPage", pageNumber);
         return new ModelAndView("index").addAllObjects(modelMap);
     }

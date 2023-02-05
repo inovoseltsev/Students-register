@@ -51,7 +51,7 @@
         </tbody>
     </table>
     <div class="pagination">
-        <p class="navigation-label">${navigationPage} cтраница</p>
+        <p class="navigation-label">${navigationPage} page</p>
         <nav class="pagination-bar" aria-label="Page navigation example">
             <ul class="pagination">
                 <c:forEach var="number" begin="1" end="${numberOfPages}">

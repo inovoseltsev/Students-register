@@ -63,8 +63,7 @@ public class StudentServiceImpl implements StudentService {
 
     private int countStudentAge(Date birthday) {
         Date currentDate = new Date(new java.util.Date().getTime());
-        Period period = Period.between(birthday.toLocalDate(),
-                currentDate.toLocalDate());
+        Period period = Period.between(birthday.toLocalDate(), currentDate.toLocalDate());
         return period.getYears();
     }
 }
